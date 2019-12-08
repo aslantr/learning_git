@@ -22,7 +22,7 @@ public class SimpleServer {
         PrintWriter out = new PrintWriter(client.getOutputStream());
 
         out.write("Welcome"+"\n");
-        out.write("what is your name ");
+        out.write("what is your name "+"\n");
         out.flush();
 
 
