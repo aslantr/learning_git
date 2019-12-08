@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TraveloBoard</string>
+    <string name="title_activity_get_data">GetData</string>
+</resources>
