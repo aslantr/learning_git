@@ -1,1 +1,1 @@
-git commands
+git status = returns the status of the files
