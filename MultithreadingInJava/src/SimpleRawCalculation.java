@@ -4,6 +4,7 @@ import java.util.List;
 public class SimpleRawCalculation {
     private  static  int value;
 
+    private  static  Object SYCN_OBJECT = new Object();
     static  void  increment(){
 
         /*
@@ -14,10 +15,11 @@ public class SimpleRawCalculation {
             e.setStackTrace();
         }
         value= newValue; */
-        
-        for (int i = 0; i <1000 ; i++) {
-            value++;
 
+        for (int i = 0; i <1000 ; i++) {
+            synchronized (SYCN_OBJECT) {
+                value++;
+            }
         }
 
     }
