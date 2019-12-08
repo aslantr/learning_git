@@ -15,24 +15,25 @@ public class SimpleServer {
 
         System.out.println("Server started at port number = "+ portNumber);
 
-        Socket client = server.accept();
+        while(true) {
+            Socket client = server.accept();
 
-        System.out.println("Client connected!");
+            System.out.println("Client connected!");
 
-        PrintWriter out = new PrintWriter(client.getOutputStream());
+            PrintWriter out = new PrintWriter(client.getOutputStream());
 
-        out.write("Welcome"+"\n");
-        out.write("what is your name "+"\n");
-        out.flush();
+            out.write("Welcome" + "\n");
+            out.write("what is your name " + "\n");
+            out.flush();
 
 
-        BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+            BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
 
-        String name = in.readLine();
+            String name = in.readLine();
 
-        out.write("Welcome "+ name+"\n");
+            out.write("Welcome " + name + "\n");
 
-        out.flush();
-
+            out.flush();
+        }
     }
 }
