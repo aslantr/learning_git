@@ -1,1 +1,1 @@
-git status = returns the status of the files
+git log= return changes to the file
